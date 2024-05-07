@@ -40,8 +40,8 @@ router.get(
 router.get(
   "/google/callback",
   passport.authenticate("google", {
-    failureRedirect: "https://geeztoamharic.onrender.com/api/users/google/failure", // Redirect to failure route on authentication failure
-    successRedirect: "https://geeztoamharic.onrender.com/api/users/google/success", // Redirect to success route on authentication success
+    failureRedirect: "/api/users/google/failure", // Redirect to failure route on authentication failure
+    successRedirect: "/api/users/google/success", // Redirect to success route on authentication success
   })
 );
 
