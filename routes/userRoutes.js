@@ -1,7 +1,7 @@
 const express = require("express");
 const { protect } = require("../middlewares/authMiddleware");
 const passport = require("passport");
-// require("../controllers/googleAuth");
+require("../controllers/googleAuth");
 
 const {
   registerUser,
@@ -34,22 +34,22 @@ router.route("/delete/:id").delete(protect, deleteUser);
 
 router.get(
   "/google",
-    res.status(500).json({ success: "False", Message: "Failed to Authenticate" });
-  // passport.authenticate("google", { scope: ["email", "profile"] })
+    // res.status(500).json({ success: "False", Message: "Failed to Authenticate" });
+  passport.authenticate("google", { scope: ["email", "profile"] })
 );
 
-// router.get(
-//   "/google/callback",
-//   passport.authenticate("google", {
-//     failureRedirect: "/api/users/google/failure", // Redirect to failure route on authentication failure
-//     successRedirect: "/api/users/google/success", // Redirect to success route on authentication success
-//   })
-// );
+router.get(
+  "/google/callback",
+  passport.authenticate("google", {
+    failureRedirect: "/api/users/google/failure", // Redirect to failure route on authentication failure
+    successRedirect: "/api/users/google/success", // Redirect to success route on authentication success
+  })
+);
 
 // Route for handling authentication failure
-// router.get("/google/failure", (req, res) => {
-//   res.status(500).json({ success: "False", Message: "Failed to Authenticate" });
-//     });
+router.get("/google/failure", (req, res) => {
+  res.status(500).json({ success: "False", Message: "Failed to Authenticate" });
+    });
 
 // Route for handling authentication success
 // router.get("/google/success", (req, res) => {
@@ -58,7 +58,7 @@ router.get(
 //   // res.redirect("/auth/google-login");
 //     // console.log(req.user);
 // });
-// router.route("/google/success").get(authGoogleUser);
+router.route("/google/success").get(authGoogleUser);
 
 
 
