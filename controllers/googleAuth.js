@@ -10,7 +10,7 @@ passport.use(
     {
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
-      callbackURL: "https://geeztoamharic.onrender.com/api/users/google/callback",
+      callbackURL: "http://localhost:5000/api/users/google/callback",
       passReqToCallback: true,
     },
     function (request, accessToken, refreshToken, profile, done) {
