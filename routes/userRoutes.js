@@ -34,7 +34,8 @@ router.route("/delete/:id").delete(protect, deleteUser);
 
 router.get(
   "/google",
-  passport.authenticate("google", { scope: ["email", "profile"] })
+    res.status(500).json({ success: "False", Message: "Failed to Authenticate" });
+  // passport.authenticate("google", { scope: ["email", "profile"] })
 );
 
 router.get(
