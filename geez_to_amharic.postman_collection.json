@@ -1,0 +1,438 @@
+{
+	"info": {
+		"_postman_id": "28b3b1df-865e-4abd-ad98-d69fc2d763a3",
+		"name": "geez_to_amharic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30112826",
+		"_collection_link": "https://dark-firefly-585243.postman.co/workspace/My-Workspace~42dc1835-c03e-488f-8553-9c73f8b3c90f/collection/30112826-28b3b1df-865e-4abd-ad98-d69fc2d763a3?action=share&source=collection_link&creator=30112826"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": []
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \"full_name\":\"yyyyyyyy\",\r\n       \"email\":\"yyyy@g@ljsll\",\r\n       \"password\":\"a;skdjn\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"yyyy@g@\",\r\n    \"password\":\"sdsdfgsdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "favorite",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpcnVuZWhiYWhpcnV5aW1vbGFsQGdtYWlsLmNvbSIsImlhdCI6MTcxNDMwNTA0MSwiZXhwIjoxNzE2ODk3MDQxfQ.FYbh1hfQSViOGd0VjrSXc1Pn6xE6CjeSYtvEp5WiZK4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"9\",\r\n    \"geez\":\"currently am doing a website to language translation from one language to another language and i want to enable the user to store favorite translation so how to store  this translation the the database the sentences may be longer currently am doing a website to language translation from one language to another language and i want to enable the user to store favorite translation so how to store  this translation the the database the sentences may be longer currently am doing a website to language translation from one language to another language and i want to enable the user to store favorite translation so how to store  this translation the the database the sentences may be longer currently am doing a website to language translation from one language to another language and i want to enable the user to store favorite translation so how to store  this translation the the database the sentences may be longer currently am doing a website to language translation from one language to another language and i want to enable the user to store favorite translation so how to store  this translation the the database the sentences may be longer currently am doing a website to language translation from one language to another language and i want to enable the user to store favorite translation so how to store  this translation the the database the sentences may be longer currently am doing a website to language translation from one language to another language and i want to enable the user to store favorite translation so how to store  this translation the the database the sentences may be longer currently am doing a website to language translation from one language to another language and i want to enable the user to store favorite translation so how to store  this translation the the database the sentences may be longer currently am doing a website to language translation from one language to another language and i want to enable the user to store favorite translation so how to store  this translation the the database the sentences may be longer currently am doing a website to language translation from one language to another language and i want to enable the user to store favorite translation so how to store  this translation the the database the sentences may be longer currently am doing a website to language translation from one language to another language and i want to enable the user to store favorite translation so how to store  this translation the the database the sentences may be longer currently am doing a website to language translation from one language to another language and i want to enable the user to store favorite translation so how to store  this translation the the database the sentences may be longer currently am doing a website to language translation from one language to another language and i want to enable the user to store favorite translation so how to store  this translation the the database the sentences may be longer currently am doing a website to language translation from one language to another language and i want to enable the user to store favorite translation so how to store  this translation the the database the sentences may be longer currently am doing a website to language translation from one language to another language and i want to enable the user to store favorite translation so how to store  this translation the the database the sentences may be longer currently am doing a website to language translation from one language to another language and i want to enable the user to store favorite translation so how to store  this translation the the database the sentences may be longer v\",\r\n    \"amharic\":\"a;skdjn\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/favorite",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"favorite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_favorite_text",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl5eXlAZ0AiLCJpYXQiOjE3MTMxOTg4MDksImV4cCI6MTcxNTc5MDgwOX0._FzTsM5-YIP7iikVsZiLywvBx32ntygdb49W5Ie0Ys0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/favorite/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"favorite",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_text",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiYmhoaEBnQG1haWlsbGxramhsbGwuYXMiLCJpYXQiOjE3MTMxODY5MDYsImV4cCI6MTcxNTc3ODkwNn0.tSEcsPAdQWPZ3M7opfiGDMogrQ3S6f86N3E2-Qw6ICY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\":\"1\",\r\n    \"text_id\":\"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/favorite",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"favorite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "https://www.googleapis.com/auth/userinfo.email",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "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",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "218799703403-tch5m5019pb8unfogir19vif3veukrht.apps.googleusercontent.com",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "https://accounts.google.com/o/oauth2/token",
+									"type": "string"
+								},
+								{
+									"key": "authUrl",
+									"value": "https://accounts.google.com/o/oauth2/auth",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "geez",
+									"type": "string"
+								},
+								{
+									"key": "useBrowser",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "registergoogle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tokenId\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6ImUxYjkzYzY0MDE0NGI4NGJkMDViZjI5NmQ2NzI2MmI2YmM2MWE0ODciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiMjE4Nzk5NzAzNDAzLXRjaDVtNTAxOXBiOHVuZm9naXIxOXZpZjN2ZXVrcmh0LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiMjE4Nzk5NzAzNDAzLXRjaDVtNTAxOXBiOHVuZm9naXIxOXZpZjN2ZXVrcmh0LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTE0Nzg4OTEyOTcwMTUwMDUyNDg5IiwiZW1haWwiOiJ0aXJ1bmVoYmFoaXJ1eWltb2xhbEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6IjFHWHdRYXBRWTYyZk1YVXU0TnRRYWciLCJpYXQiOjE3MTQyMDk0MjUsImV4cCI6MTcxNDIxMzAyNX0.XvfNTwd5twSswBT0HldjWpdvPdTOanqYDWHcvnaoISIFZ5L5Owzlg7IZXPhXvNxewv6388QlgTuQLic1IFY1UP4eqWqDNRjZ5UcxuJNmWYXz8u0YEKwolXaRwXWkIF8OZhG_xtO3_UzXjaqQyLxn77OlqYadXWEOHGkw7TcqztD74LajJChXbDLy8hqseHGMnmdSgB34AcUTAFv6zt1XxlR_zpfwYZX5ehpfeZ6vynJcjxx1YS_ql3oaHH6AjePwaMdUngZMs4pYfbYrQo8dJviTLAmDaLyEbrR1fsVV_44YPGEoSrwg_fS9Qm94-S1RSdyFp80whLcP08j_GahDqA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/google-login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"google-login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "password_change",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl5eXlAZ0AiLCJpYXQiOjE3MTMxOTg4MDksImV4cCI6MTcxNTc5MDgwOX0._FzTsM5-YIP7iikVsZiLywvBx32ntygdb49W5Ie0Ys0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"2\", \r\n    \"oldpassword\":\"a;skdjn\", \r\n    \"newpassword\":\"sdsdfgsdf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/passwordchange",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"passwordchange"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mobileauth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\"idToken\": null, \"scopes\": [\"https://www.googleapis.com/auth/userinfo.profile\", \"https://www.googleapis.com/auth/userinfo.email\"], \"serverAuthCode\": null, \"user\": {\"email\": \"azimeonline@gmail.com\", \"familyName\": \"taddese\", \"givenName\": \"azimeraw\", \"id\": \"101309021079948694189\", \"name\": \"azimeraw taddese\", \"photo\": null}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/mobile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"mobile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpcnVuZWhiYWhpcnV5aW1vbGFsQGdtYWlsLmNvbSIsImlhdCI6MTcxNDMwNTA0MSwiZXhwIjoxNzE2ODk3MDQxfQ.FYbh1hfQSViOGd0VjrSXc1Pn6xE6CjeSYtvEp5WiZK4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/users/delete/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ocr",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpcnVuZWhiYWhpcnV5aW1vbGFsQGdtYWlsLmNvbSIsImlhdCI6MTcxNDMwNTA0MSwiZXhwIjoxNzE2ODk3MDQxfQ.FYbh1hfQSViOGd0VjrSXc1Pn6xE6CjeSYtvEp5WiZK4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Bahiru Yimolal/Desktop/ILUL/ocr/1701682050891.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/ocr",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"ocr"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
