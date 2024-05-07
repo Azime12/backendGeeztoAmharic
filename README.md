@@ -18,6 +18,6 @@ cd config
 node createDb,js
 ```
 
-#### 3 Import the Database Using XAMPP - File Name "shemachoch.sql" inside config folder
+#### 3 Import the Database Using XAMPP - File Name "database file .sql" inside config folder
 
-#### 4 Import the Postman collection using Postman - File Name "shemachoch.postman_collection.json" inside the main directory
+#### 4 Import the Postman collection using Postman - File Name ".postman_collection.json" inside the main directory
