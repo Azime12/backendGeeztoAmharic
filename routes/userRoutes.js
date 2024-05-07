@@ -1,7 +1,7 @@
 const express = require("express");
 const { protect } = require("../middlewares/authMiddleware");
 const passport = require("passport");
-require("../controllers/googleAuth");
+// require("../controllers/googleAuth");
 
 const {
   registerUser,
