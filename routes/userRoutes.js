@@ -50,9 +50,9 @@ router.get(
 router.get("/google/failure", (req, res) => {
   res.status(500).json({ success: "False", Message: "Failed to Authenticate" });
     });
-router.get("/google/success", (req, res) => {
-  res.status(500).json({ success: "False", Message: "Failed to Authenticate" });
-    });
+// router.get("/google/success", (req, res) => {
+//   res.status(500).json({ success: "False", Message: "Failed to Authenticate" });
+//     });
 
 // Route for handling authentication success
 // router.get("/google/success", (req, res) => {
@@ -61,7 +61,7 @@ router.get("/google/success", (req, res) => {
 //   // res.redirect("/auth/google-login");
 //     // console.log(req.user);
 // });
-// router.route("/google/success").get(authGoogleUser);
+router.route("/google/success").get(authGoogleUser);
 
 
 
