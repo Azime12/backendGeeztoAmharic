@@ -42,7 +42,7 @@ router.get(
   "/google/callback",
   passport.authenticate("google", {
     failureRedirect: "/api/users/google/failure", // Redirect to failure route on authentication failure
-    successRedirect: "/api/users/google/success", // Redirect to success route on authentication success
+    successRedirect: "http://localhost:5173/login-success", // Redirect to success route on authentication success
   })
 );
 
@@ -61,7 +61,7 @@ router.get("/google/failure", (req, res) => {
 //   // res.redirect("/auth/google-login");
 //     // console.log(req.user);
 // });
-router.route("/google/success").get(authGoogleUser);
+// router.route("/google/success").get(authGoogleUser);
 
 
 
