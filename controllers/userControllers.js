@@ -188,6 +188,7 @@ const registerUser = async (req, res, next) => {
         message: "User Registerd Successfully",
         token:accessToken,
         userinfo,
+      });
     } catch (error) {
       console.error("An error occurred during user registration:", error);
 
