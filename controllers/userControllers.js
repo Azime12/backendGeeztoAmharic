@@ -46,7 +46,7 @@ const authUserMobile = async (req, res, next) => {
 
   if (useremail) {
     const accessToken = generateToken(email);
-    delete useremail["password"];
+    // delete useremail["password"];
     res.status(200).json({ token: accessToken, useremail, pic });
     return;
   } else {
@@ -54,7 +54,7 @@ const authUserMobile = async (req, res, next) => {
       const fulluser = await User.registerGoogle(full_name, email);
       const accessToken = generateToken(email);
       const userinfo = await User.getByEmail(email);
-      delete userinfo["password"];
+      // delete userinfo["password"];
       res.status(200).json({ token: accessToken, userinfo, pic });
     } catch (error) {
       console.error("An error occurred during user registration:", error);
@@ -86,7 +86,7 @@ const authGoogleUser = async (req, res, next) => {
 
   if (useremail) {
     const accessToken = generateToken(email);
-    delete useremail["password"];
+    // delete useremail["password"];
     res.status(200).json({ token: accessToken, useremail, pic });
     return;
   } else {
@@ -94,7 +94,7 @@ const authGoogleUser = async (req, res, next) => {
       const fulluser = await User.registerGoogle(full_name, email);
       const accessToken = generateToken(email);
       const userinfo = await User.getByEmail(email);
-      delete userinfo["password"];
+      // delete userinfo["password"];
       res.status(200).json({ token: accessToken, userinfo, pic });
     } catch (error) {
       console.error("An error occurred during user registration:", error);
@@ -138,7 +138,7 @@ const authUser = async (req, res, next) => {
     const user_info = await User.getPassword(email);
     // console.log(super_admin_info);
     const comparison = await bcrypt.compare(password, user_info.password);
-    delete user_info["password"];
+    // delete user_info["password"];
     if (comparison) {
       const accessToken = generateToken(email);
       res.status(200).json({ token: accessToken, user_info });
@@ -179,13 +179,15 @@ const registerUser = async (req, res, next) => {
       // console.log(encryptedPassword);
       const fulluser = await User.register(full_name, email, encryptedPassword);
       const userinfo = await User.getByEmail(email);
-      delete userinfo["password"];
+      // delete userinfo["password"];
       // console.log(useremail);
+      const accessToken = generateToken(email);
+      // res.status(200).json({ token: accessToken, user_info });
       res.status(201).json({
         success: "True",
         message: "User Registerd Successfully",
+        token:accessToken,
         userinfo,
-      });
     } catch (error) {
       console.error("An error occurred during user registration:", error);
 
